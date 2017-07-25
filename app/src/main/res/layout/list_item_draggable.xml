@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NOTE: should use FrameLayout or RelativeLayout for parent of the "@id/container" view (for Android 2.3 compatibility) -->
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/commonListItemStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:foreground="@android:color/transparent"
+    android:background="@android:color/transparent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:foreground="@android:color/transparent"
+        tools:ignore="UselessParent">
+
+        <!-- NOTE: the drag handle should set android:clickable=true not to propagate click events to the parent views -->
+        <ImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/drag_handle"
+            android:scaleType="center"
+            android:clickable="true"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/arsenal_fc_icon"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="253dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginLeft="99dp"
+            android:layout_marginRight="32dp"
+            android:paddingTop="12dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+
+</FrameLayout>
+
+
+
+</FrameLayout>
